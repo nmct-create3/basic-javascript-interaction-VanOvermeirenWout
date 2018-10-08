@@ -1,88 +1,104 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Blockport - Basic javascript interaction</title>
-        <meta name="description" content="This is my HTML5 boilerplate.">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="msapplication-TileColor" content="#3385FF">
-        <meta name="theme-color" content="#3385FF">
 
-        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-        <link rel="manifest" href="site.webmanifest">
-        <link rel="mask-icon" href="safari-pinned-tab.svg" color="#3385FF">
+<head>
+    <script src="script/app.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Blockport - Basic javascript interaction</title>
+    <meta name="description" content="This is my HTML5 boilerplate.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#3385FF">
+    <meta name="theme-color" content="#3385FF">
 
-        <link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/screen.css">
-    </head>
-    <body>
-        <section class="o-row o-row--lg o-row--login o-row--beta">
-            <div class="o-container u-max-width-xs">
-				<form class="c-card" action="#" novalidate>
-                    <div class="c-card__body">
-                        <h2 class="c-card__title">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#3385FF">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/screen.css">
+</head>
+
+<body>
+    <section class="o-row o-row--lg o-row--login o-row--beta">
+        <div class="o-container u-max-width-xs">
+            <form class="c-card" action="#" novalidate>
+                <div class="c-card__body">
+                    <h2 class="c-card__title">
                             Custom input types
                         </h2>
-                        <div class="o-section">
-                            <!-- Floating Inputs -->
-                            <h5>
+                    <div class="o-section">
+                        <!-- Floating Inputs -->
+                        <h5>
                                 Floating Inputs
                             </h5>
-							<p class="c-form-field c-form-field--floating-labels">
-								<input class="c-input js-name-input" type="email" name="username" id="username" required>
-								<label class="c-label c-label--floating js-floating-label" for="username">
+                        <p class="c-form-field c-form-field--floating-labels">
+                            <input class="c-input js-name-input" type="email" name="username" id="username" required>
+                            <label class="c-label c-label--floating js-floating-label" for="username">
 									Name
 								</label>
-							</p>
-							<h5>
+                        </p>
+                        <h5>
 								Password Toggle
 							</h5>
-							<p class="c-form-field">
-								<label class="c-label" for="password">
+                        <p class="c-form-field">
+                            <label class="c-label" for="password">
 									Password
 								</label>
-								<span class="c-password-toggle-container">
+                            <span class="c-password-toggle-container">
 									<input class="c-input c-input--password-with-toggle js-password-input" type="password" name="password" id="password"
 									 required>
-									<!-- Password toggle -->
-									<!-- TODO: add password toggle -->
-								</span>
-							</p>
-                            <!-- Custom range slider -->
-                            <h5>
+
+                                     <span class="c-toggle-password">
+                                        <input type="checkbox" id="toggleCheckbox" class="o-hide-accessible c-toggle-password__checkbox">
+                                        <label for="toggleCheckbox" class="c-toggle-password__label">
+                                                         <span class="c-toggle-password__symbol">
+                                                             show password
+                                                         </span>
+
+
+                            </label>
+                            </span>
+
+                            <!-- Password toggle -->
+                            <!-- TODO: add password toggle -->
+                            </span>
+                        </p>
+                        <!-- Custom range slider -->
+                        <h5>
                                 Range Slider
                             </h5>
-							<p class="c-form-field">
-								<label class="c-label" for="quality">
+                        <p class="c-form-field">
+                            <label class="c-label" for="quality">
 									Quality of Create III
 								</label>
-								<input class="c-input c-range js-quality-input" type="range" min="0" max="100" value="0" name="quality" id="quality" required>
-								<span class="c-range-holder js-range-holder" data-value="0">
+                            <input class="c-input c-range js-quality-input" type="range" min="0" max="100" value="0" name="quality" id="quality" required>
+                            <span class="c-range-holder js-range-holder" data-value="0">
 								</span>
-							</p>
-							<!-- Dropdown -->
-							<h5>
+                        </p>
+                        <!-- Dropdown -->
+                        <h5>
 								Dropdown
 							</h5>
-							<!-- TODO: add Markup for the buttons -->
+                        <!-- TODO: add Markup for the buttons -->
 
-                            <!-- Like -->
-                            <h5>
+                        <!-- Like -->
+                        <h5>
                                 Like this excercise!
                             </h5>
-                            <p class="c-like">
-                                <input class="o-hide-accessible c-like__input" type="checkbox" id="like">
-                                <label class="c-label c-like__label" for="like">
+                        <p class="c-like">
+                            <input class="o-hide-accessible c-like__input" type="checkbox" id="like">
+                            <label class="c-label c-like__label" for="like">
 									<!-- TODO: place SVG icon -->
 								</label>
-                            </p>
-						</div>
+                        </p>
                     </div>
-                </form>
-            </div>
-        </section>
-    </body>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+
 </html>

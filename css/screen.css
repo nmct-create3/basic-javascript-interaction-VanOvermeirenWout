@@ -674,8 +674,32 @@ more padding on the right to avoid overlap
     font-size: 14px;
     line-height: 16px;
     color: var(--color-neutral-x-dark);
+    top: 12px;
+    left: 8px;
+    padding: 4px 8px;
+    will-change: transform;
+    transform: translateY(0);
+    transition: transform 200ms ease-in-out;
+    box-shadow: 0 0 4px rgba(255,255,255,0.8);
+    background: white;
 }
 
+.c-input:focus+ .c-label {
+    transform: translateY(-24px);
+
+}
+
+.c-label--floating {
+    position: absolute;
+}
+
+.c-toggle-password__checkbox:checked + .c-toggle-passord__label {
+    background-color: red;
+}
+
+.is-floating {
+    transform: translateY(-24px);
+}
 /*
     Component: Dropdown Button
     ---
